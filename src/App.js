@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./style.css"
+import { useState, useEffect } from "react"
+import DisplayScore from "./components/DisplayScore"
+import DisplayQA from "./components/DisplayQA"
+import RevealQuestion from "./components/RevealQuestion"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    const [jeopardyQA, setJeopardyQA] = useState(null)
+    const [score, setScore] = useState(0)
+
+
+    const increaseScore = () => {
+        if (jeopardyQA && jeopardyQA.value)
+            setScore(score + jeopardyQA.value)
+    }
+
+    const decreaseScore = () => {
+        if (jeopardyQA && jeopardyQA.value)
+            setScore(score + jeopardyQA.value)
+    }
+
+    const resetScore = () => {
+        if (jeopardyQA && jeopardyQA.value)
+            setScore(score + jeopardyQA.value)
+    };
+
+    const getJeopardyQA = async () => {
+        try {
+            const response = await fetch('https://jservice.io/api/random')
+            const data = await response.json()
+            setJeopardyQA(data[0])
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    return (
+        <div className="App">
+            <h4>SCORE:{score}</h4>
+            <DisplayScore
+                score={score}
+                increaseScore={increaseScore}
+            />
+            <DisplayQA jeopardyQA={jeopardyQA} getJeopardyQA={getJeopardyQA} />
+            <RevealQuestion jeopardyQA={jeopardyQA} />
+
+        </div>
+    )
 }
-
-export default App;
