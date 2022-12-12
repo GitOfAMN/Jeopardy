@@ -1,8 +1,12 @@
-export default function DisplayScore({ increaseScore, score }) {
-    return (
+import React from 'react'
+
+export default function DisplayScore({ increaseScore, decreaseScore, resetScore, score }) {
+  return (
       <>
-        <h2>In Component {score} </h2>
         <button onClick={increaseScore}>Increase</button>
+        <button onClick={decreaseScore}>Decrease</button>
+        <button onClick={resetScore}>Reset</button>
       </>
-    );
+
+      );
   }

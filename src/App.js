@@ -1,4 +1,5 @@
 import "./style.css"
+import React from 'react'
 import { useState, useEffect } from "react"
 import DisplayScore from "./components/DisplayScore"
 import DisplayQA from "./components/DisplayQA"
@@ -35,15 +36,17 @@ export default function App() {
     }
 
     return (
-        <div className="App">
-            <h4>SCORE:{score}</h4>
-            <DisplayScore
-                score={score}
-                increaseScore={increaseScore}
-            />
-            <DisplayQA jeopardyQA={jeopardyQA} getJeopardyQA={getJeopardyQA} />
-            <RevealQuestion jeopardyQA={jeopardyQA} />
-
+            <div className="App">
+                <h1>Welcome to Jeopardy!</h1>
+                <h4>SCORE:{score}</h4>
+                <DisplayScore
+                    score={score}
+                    decreaseScore={decreaseScore}
+                    increaseScore={increaseScore}
+                />
+                <h4>Let's play!</h4>
+                <DisplayQA jeopardyQA={jeopardyQA} getJeopardyQA={getJeopardyQA} />
+                <RevealQuestion jeopardyQA={jeopardyQA} />
         </div>
     )
 }
