@@ -8,9 +8,9 @@ export default function RevealQuestion({ jeopardyQA }) {
       <button
         onClick={() => {
           setShowQuestion(!showQuestion)
-        }}
+        }} className="reveal"
       >
-        {showQuestion ? "Hide Question" : "Reveal Question"}
+        {showQuestion ? "Hide Question" : "Click to Reveal Question"}
       </button>
       {jeopardyQA && jeopardyQA.question && showQuestion ? (
         <div>{jeopardyQA.question}</div>

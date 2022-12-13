@@ -46,6 +46,9 @@ export default function App() {
                 />
                 <h4>Let's play!</h4>
                 <DisplayQA jeopardyQA={jeopardyQA} getJeopardyQA={getJeopardyQA} />
+                <h5>Category:</h5>
+                <h6>Points:{score}</h6>
+                <h6>Answer:</h6>
                 <RevealQuestion jeopardyQA={jeopardyQA} />
         </div>
     )

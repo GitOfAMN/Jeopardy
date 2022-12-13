@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component }  from 'react';
 
 export default function DisplayQA({ jeopardyQA, getJeopardyQA }) {
     return (
@@ -8,7 +8,7 @@ export default function DisplayQA({ jeopardyQA, getJeopardyQA }) {
         ) : (
           <>No question yet</>
         )}
-        <button onClick={getJeopardyQA}> Get A Question</button>
+        <button onClick={getJeopardyQA} className="question"> Get Question</button>
       </>
     );
   }

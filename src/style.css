@@ -44,7 +44,7 @@ body {
   width: 40%;
 }
 
-.todolist {
+/* .todolist {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,9 +64,9 @@ body {
   padding: 0 1rem;
   margin: 0.15rem 0;
   background-color: lightcyan;
-}
+} */
 
-.todolist>li .left {
+/* .todolist>li .left {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 
 h1 {
@@ -96,11 +96,43 @@ h1 {
 }
 
 h4 {
-  color: #F1E970;
+  color: #F9E79F;
   font-size: calc(1vw + 12px);
 }
 
-button {
-  background-color: rgb(23, 5, 58);
-  color: lightcyan;
+h5 {
+  color: #F9E79F;
+}
+
+h6 {
+  color: #F9E79F;
+}
+
+.increase {
+  background-color: pink;
+  color: black;
+  border-radius: 10px;
+}
+
+.decrease {
+  background-color: #5499C7;
+  color: black;
+  border-radius: 10px;
+}
+
+.reset {
+  background-color: red;
+  color: black;
+  border-radius: 10px;
+}
+
+.question {
+  background-color: #F9E79F;
+  color: #6383AA;
+  border-radius: 10px;
+}
+
+.reveal {
+  background-color: darkblue;
+  color: ghostwhite;
 }
