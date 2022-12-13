@@ -42,9 +42,9 @@ body {
   margin: 0 0 2rem;
 }
 
-.App>input {
+/* .App>input {
   width: 40%;
-}
+} */
 
 /* .todolist {
   display: flex;
@@ -114,27 +114,37 @@ h6 {
   background-color: pink;
   color: black;
   border-radius: 10px;
+  padding: 20px;
+  font-family: 'Rubik', sans-serif;
 }
 
 .decrease {
   background-color: #5499C7;
   color: black;
   border-radius: 10px;
+  padding: 20px;
+  font-family: 'Rubik', sans-serif;
 }
 
 .reset {
   background-color: red;
   color: black;
   border-radius: 10px;
+  padding: 20px;
+  font-family: 'Rubik', sans-serif;
 }
 
 .question {
   background-color: #F9E79F;
   color: #6383AA;
   border-radius: 10px;
+  padding: 20px;
+  font-family: 'Rubik', sans-serif;
 }
 
 .reveal {
   background-color: darkblue;
   color: ghostwhite;
+  padding: 20px;
+  font-family: 'Rubik', sans-serif;
 }

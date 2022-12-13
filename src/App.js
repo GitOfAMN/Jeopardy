@@ -17,12 +17,12 @@ export default function App() {
 
     const decreaseScore = () => {
         if (jeopardyQA && jeopardyQA.value)
-            setScore(score + jeopardyQA.value)
+            setScore(score - jeopardyQA.value)
     }
 
     const resetScore = () => {
         if (jeopardyQA && jeopardyQA.value)
-            setScore(score + jeopardyQA.value)
+            setScore(0)
     };
 
     const getJeopardyQA = async () => {
@@ -36,20 +36,25 @@ export default function App() {
     }
 
     return (
-            <div className="App">
-                <h1>Welcome to Jeopardy!</h1>
-                <h4>SCORE:{score}</h4>
-                <DisplayScore
-                    score={score}
-                    decreaseScore={decreaseScore}
-                    increaseScore={increaseScore}
-                />
-                <h4>Let's play!</h4>
-                <DisplayQA jeopardyQA={jeopardyQA} getJeopardyQA={getJeopardyQA} />
-                <h5>Category:</h5>
-                <h6>Points:{score}</h6>
-                <h6>Answer:</h6>
-                <RevealQuestion jeopardyQA={jeopardyQA} />
+        <div className="App">
+            <h1>Welcome to Jeopardy!</h1>
+            <h4>SCORE:{score}</h4>
+            <DisplayScore
+                score={score}
+                decreaseScore={decreaseScore}
+                increaseScore={increaseScore}
+                resetScore={resetScore}
+            />
+            <h4>Let's play!</h4>
+            <DisplayQA jeopardyQA={jeopardyQA} getJeopardyQA={getJeopardyQA} />
+            <h5>Category:</h5>
+            <h6>Points:{score}</h6>
+            {jeopardyQA && jeopardyQA.value ? (
+                <h6>Answer is: {jeopardyQA.answer}</h6>
+            ) : (
+                <></>
+            )}
+            <RevealQuestion jeopardyQA={jeopardyQA} />
         </div>
     )
 }
