@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant:wght@300&family=Great+Vibes&family=Playfair+Display+SC:ital,wght@1,900&family=Rubik&family=Staatliches&display=swap');
+
 * {
   box-sizing: border-box;
   outline: none;
@@ -30,7 +32,7 @@ body {
 }
 
 .App {
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
   text-align: center;
   background-color: #6383AA;
   width: 90vw;
